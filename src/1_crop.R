@@ -1,4 +1,4 @@
-# libraries
+# libraries --------------------------------------------------------------------
 library(tidyverse) # for general data manipulation
 library(cmdstanr) # core library for Bayesian statistics
 library(bayesplot) # for dignostics visualization
