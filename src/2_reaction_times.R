@@ -147,6 +147,8 @@ df_exp_c <- as_draws_df(fit_exp_c$draws())
 
 # compare congruent vs incongruent ---------------------------------------------
 # incongruent
+# !!! distribution mean is now mu + 1/lambda !!!
+# !!! mu is the mean of the normal component !!!
 mean_i <- df_exp_i$mu + (1 / df_exp_i$lambda)
 mean_c <- df_exp_c$mu + (1 / df_exp_c$lambda)
 mcse(mean_c < mean_i)
@@ -162,15 +164,15 @@ ggplot(data = df_plot, aes(x = mean, y = label)) +
 
 # region of practical equivalence (ROPE) ---------------------------------------
 comparison <- data.frame(equal = 0, c = 0, i = 0)
-# measurement error 0.15 s
-ROPE <- 0.15
+# measurement error 0.15 ms
+rope <- 0.15
 for (i in seq_len(nrow(df_exp_i))) {
     mean_i <- mean(df_exp_i[i, ]$mu + 1 / df_exp_i[i, ]$lambda)
     mean_c <- mean(df_exp_c[i, ]$mu + 1 / df_exp_c[i, ]$lambda)
 
     diff <- abs(mean_i - mean_c)
 
-    if (diff > ROPE) {
+    if (diff > rope) {
         if (mean_c < mean_i) {
             comparison$c <- comparison$c + 1
         } else {
