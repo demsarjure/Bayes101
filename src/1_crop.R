@@ -29,9 +29,7 @@ stan_data <- list(
 
 # fit
 fit_1 <- model$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    refresh = 0
+    data = stan_data
 )
 
 # diagnostics
@@ -51,9 +49,7 @@ stan_data <- list(
 
 # fit
 fit_2 <- model$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    refresh = 0
+    data = stan_data
 )
 
 # diagnostics
@@ -73,9 +69,7 @@ stan_data <- list(
 
 # fit
 fit_3 <- model$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    refresh = 0
+    data = stan_data
 )
 
 # diagnostics
@@ -108,7 +102,7 @@ for (i in 1:n) {
 }
 mcse(best_3)
 
-# 5. What is the probbaility that f3 will give better results next year?
+# 5. What is the probability that f3 will give better results next year?
 best_next_year_3 <- vector()
 for (i in 1:n) {
     next_1 <- rnorm(1, df_samples_1$mu[i], df_samples_1$sigma[i])

@@ -30,9 +30,7 @@ stan_data <- list(n = n, y = y)
 
 # fit
 fit_normal <- model_normal$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    seed = 1
+    data = stan_data
 )
 
 # diagnostics
@@ -78,9 +76,7 @@ ggplot() +
 
 # fit incongruent with the emg model -------------------------------------------
 fit_exp_i <- model_exp$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    seed = 1
+    data = stan_data
 )
 
 # diagnostics
@@ -138,9 +134,7 @@ y <- df_congruent$rt
 stan_data <- list(n = n, y = y)
 
 fit_exp_c <- model_exp$sample(
-    data = stan_data,
-    parallel_chains = 4,
-    seed = 1
+    data = stan_data
 )
 
 # diagnostics
