@@ -4,9 +4,9 @@ data {
 }
 
 parameters {
-  real mu;     // mean
-  real sigma;  // stdev
-  real lambda; // rate
+  real mu;              // mean
+  real<lower=0> sigma;  // stdev
+  real<lower=0> lambda; // rate
 }
 
 model {
