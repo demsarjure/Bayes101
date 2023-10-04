@@ -1,10 +1,10 @@
 # Bayes101
 
-Author: Jure Demsar
-Email: <jure.demsar@fri.uni-lj.si>
-Affiliation: Faculty of Computer and Information science and Faculty of Arts, Department of Psychology, Unviersity of Ljubljana.
-
 A repository for the Bayesian Statistics 101 workshop. If you are interested in getting serious about Bayesian statistics, you can find some additional resources below.
+
+* Author: Jure Demsar
+* Email: <jure.demsar@fri.uni-lj.si>
+* Affiliation: Faculty of Computer and Information science and Faculty of Arts, Department of Psychology, Unviersity of Ljubljana.
 
 ## Additional resources
 
